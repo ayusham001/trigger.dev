@@ -100,11 +100,11 @@ To establish an API route for interacting with Trigger.dev, follow these steps:
 
 ```javascript
 const express = require('express');
-const { createExpressRoute } = require('@trigger.dev/express');
+const { createExpressServer } = require('@trigger.dev/express');
 const { client } = require('./trigger'); // Update the path as per your project structure
 
 const router = express.Router();
-const { POST } = createExpressRoute(client);
+const { POST } = createExpressServer(client);
 
 router.post('/trigger', POST);
 
